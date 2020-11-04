@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:Being/widgets/cards/action_suggestion_card.dart';
 import 'package:Being/widgets/buttons/navigate_to_journal_entry.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:Being/screens/yoga.dart';
 
 class HomeTab extends StatefulWidget {
   @override
@@ -98,7 +100,15 @@ class _HomeTabState extends State<HomeTab> {
                 'Breathe Easy',
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                      child: Yoga(),
+                      type: PageTransitionType.bottomToTop,
+                    ),
+                  );
+                },
                 child: actionSuggestion(
                   context,
                   Color(0XFF757575),
