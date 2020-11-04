@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_nav/bottom_nav.dart';
 import 'package:intl/intl.dart';
+import 'package:Being/screens/home_tab.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,6 +11,13 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
   String today;
+
+  List<Widget> bodyContent = [
+    HomeTab(),
+    Container(),
+    Container(),
+    Container(),
+  ];
 
   @override
   void initState() {
@@ -56,6 +64,13 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
+      ),
+      body: Container(
+        margin: EdgeInsets.only(
+          left: MediaQuery.of(context).size.width * 0.04,
+          right: MediaQuery.of(context).size.width * 0.04,
+        ),
+        child: bodyContent.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNav(
         navBarHeight: 75.0,
