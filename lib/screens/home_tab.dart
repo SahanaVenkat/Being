@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:Being/widgets/cards/action_suggestion_card.dart';
+import 'package:Being/widgets/buttons/navigate_to_journal_entry.dart';
 
 class HomeTab extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class _HomeTabState extends State<HomeTab> {
   Widget build(BuildContext context) {
     return ListView(
       children: [
+        addJournalEntry(context),
         Container(
           margin: EdgeInsets.only(
             top: MediaQuery.of(context).size.height * 0.01,
