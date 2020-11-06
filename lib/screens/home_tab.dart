@@ -1,4 +1,5 @@
 import 'package:Being/screens/addiction.dart';
+import 'package:Being/screens/weight.dart';
 import 'package:flutter/material.dart';
 import 'package:Being/widgets/cards/action_suggestion_card.dart';
 import 'package:Being/widgets/buttons/navigate_to_journal_entry.dart';
@@ -55,11 +56,22 @@ class _HomeTabState extends State<HomeTab> {
                   'Sweat It Out',
                 ),
               ),
-              actionSuggestion(
+              GestureDetector(
+                 onTap: () {
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                      child: Weight(),
+                      type: PageTransitionType.bottomToTop,
+                    ),
+                  );
+                },
+                child:actionSuggestion(
                 context,
                 Color(0XFF757575),
                 '⚖️',
                 'Track Your Weight',
+              ),
               ),
               actionSuggestion(
                 context,
