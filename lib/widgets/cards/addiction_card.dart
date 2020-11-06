@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-Widget addictionCard(
-  BuildContext context, String addictionImage, String addiction, Color cardColor){
+Widget addictionCard(BuildContext context, String addictionImage,
+    String addiction, Color cardColor) {
   return Container(
-    height: MediaQuery.of(context).size.height * 0.13,
+    height: MediaQuery.of(context).size.height * 0.15,
     width: double.infinity,
     margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.01),
     padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.025),
@@ -11,31 +11,29 @@ Widget addictionCard(
       color: cardColor,
       borderRadius: BorderRadius.circular(15.0),
     ),
-      child: Row(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Image.asset(
-                addictionImage,
-                fit: BoxFit.fitHeight,
-               ),
-               Text(
-                 addiction,
-                  style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: MediaQuery.of(context).size.height * 0.035,
-                ),
-               ),
-            ],
+          flex: 2,
+          child: Image.asset(
+            addictionImage,
+            fit: BoxFit.fitWidth,
+          ),
+        ),
+        Expanded(
+          flex: 6,
+          child: Text(
+            addiction,
+            textAlign: TextAlign.right,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: MediaQuery.of(context).size.height * 0.035,
+            ),
           ),
         )
-      ]
-    )
-);
-        
-
+      ],
+    ),
+  );
 }
