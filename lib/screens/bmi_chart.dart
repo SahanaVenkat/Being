@@ -32,6 +32,13 @@ class _BMIChartState extends State<BMIChart> {
           ),
         ),
       ),
+     body: Center(
+      child: Image.asset(
+        'assets/images/yoga/BMI_CHART2.jpg', 
+        fit: BoxFit.fitHeight,
+        ),
+    
+     ),
     );
   }
 }

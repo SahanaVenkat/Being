@@ -1,8 +1,14 @@
+// ignore: unused_import
 import 'package:Being/screens/bmi_chart.dart';
+// ignore: unused_import
+import 'package:Being/screens/weight_tips.dart';
 import 'package:Being/widgets/buttons/navigate_to_bmi_chart.dart';
+// ignore: unused_import
+import 'package:Being/widgets/buttons/navigate_to_weight_tips.dart';
 import 'package:Being/widgets/cards/weight_card.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+// ignore: unused_import
 import 'package:page_transition/page_transition.dart';
 
 class Weight extends StatefulWidget {
@@ -142,9 +148,21 @@ class _WeightState extends State<Weight> {
                 ],
               ),
             ),
+            Padding(
+                padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.05,
+                ),
+                child: Row(
+                children: [Expanded(child: bmiChart(context))],
+              ),
+            ),
             Row(
-              children: [Expanded(child: bmiChart(context))],
-            )
+              children: [
+                Expanded(
+                 child: weightips(context),
+                ),
+              ],
+            ),
           ],
         ),
       ),

@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 Widget weightCard(BuildContext context, Color cardColor) {
   return Container(
     height: MediaQuery.of(context).size.height * 0.15,
-    padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.015),
-    margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.01),
+    padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.022),
+    margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.00),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(15.0),
       color: cardColor,

@@ -1,20 +1,22 @@
-import 'package:Being/screens/bmi_chart.dart';
+import 'package:Being/screens/weight_tips.dart';
+// ignore: unused_import
+import 'package:Being/screens/weight.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-Widget bmiChart(BuildContext context){
+Widget weightips(BuildContext context){
    double deviceHeight = MediaQuery.of(context).size.height;
    return GestureDetector(
      onTap: () {
       Navigator.push(
           context,
           PageTransition(
-            child: BMIChart(),
+            child: WeightTips(),
             type: PageTransitionType.rightToLeft,
 
           ));
-    },
-    child: Container(
+   },
+   child: Container(
       height: deviceHeight * 0.1,
       margin: EdgeInsets.only(
         top: deviceHeight * 0.015,
@@ -35,7 +37,7 @@ Widget bmiChart(BuildContext context){
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'BMI Chart',
+            'Tips',
             style: TextStyle(
               color: Colors.white,
               fontSize: deviceHeight * 0.03,
@@ -48,6 +50,7 @@ Widget bmiChart(BuildContext context){
           ),
         ],
       ),
-   )
-   );
+   ),
+  );
+
 }
