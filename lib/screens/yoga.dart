@@ -1,4 +1,4 @@
-import 'package:Being/screens/Bitilasana.dart';
+import 'package:Being/screens/bitilasana.dart';
 import 'package:Being/screens/balasana.dart';
 import 'package:Being/screens/konasana.dart';
 import 'package:Being/screens/uttanasana.dart';
@@ -54,94 +54,94 @@ class _YogaState extends State<Yoga> {
               ),
             ),
             GestureDetector(
-               onTap: () {
-                  Navigator.push(
-                    context,
-                    PageTransition(
-                      child:CustomOrientationPlayer(),
-                      type: PageTransitionType.bottomToTop,
-                    ),
-                  );
-                },
-                child: yogaCard(
-                    context,
-                     'assets/images/yoga/Vajrasana1.png',
-                      'Baddha Konasana',
-                      'Relieves stress and reduce fatigue',
-                       Color(0xFFFF5722),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: CustomOrientationPlayer(),
+                    type: PageTransitionType.bottomToTop,
+                  ),
+                );
+              },
+              child: yogaCard(
+                context,
+                'assets/images/yoga/Vajrasana1.png',
+                'Baddha Konasana',
+                'Relieves stress and reduce fatigue',
+                Color(0xFFFF5722),
               ),
             ),
-            GestureDetector(
-               onTap: () {
-                  Navigator.push(
-                    context,
-                    PageTransition(
-                      child:CustomOrientationPlayer1(),
-                      type: PageTransitionType.bottomToTop,
-                    ),
-                  );
-                },
-                child: yogaCard(
-                    context,
-                     'assets/images/yoga/Balasana1.png',
-                      'Balasana',
-                      'Ease your stress and anxiety',
-                       Color(0xFFFFB300),
-              ),
-            ),
-             GestureDetector(
-               onTap: () {
-                  Navigator.push(
-                    context,
-                    PageTransition(
-                      child:CustomOrientationPlayer2(),
-                      type: PageTransitionType.bottomToTop,
-                    ),
-                  );
-                },
-                child: yogaCard(
-                    context,
-                     'assets/images/yoga/Bitilasana1.png',
-                      'Bitilasana',
-                      'Creates emotional balance',
-                       Color(0xFF689F38),
-              ),
-             ),
-             GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    PageTransition(
-                      child:CustomOrientationPlayer3(),
-                      type: PageTransitionType.bottomToTop,
-                    ),
-                  );
-                },
-               child: yogaCard(
-                    context,
-                     'assets/images/yoga/Uttanasana1.png',
-                      'Uttanasana',
-                      'Calms the mind and soothes the nerves',
-                       Color(0xFF26A69A),
-              ), 
-             ),
             GestureDetector(
               onTap: () {
-                  Navigator.push(
-                    context,
-                    PageTransition(
-                      child:CustomOrientationPlayer4(),
-                      type: PageTransitionType.bottomToTop,
-                    ),
-                  );
-                },
-               child: yogaCard(
-                    context,
-                     'assets/images/yoga/Vrikshasana1.png',
-                      'Vrikshasana',
-                      'Builds self-confidence and esteem',
-                       Color(0xFFBA68C8),
-              ), 
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: CustomOrientationPlayer1(),
+                    type: PageTransitionType.bottomToTop,
+                  ),
+                );
+              },
+              child: yogaCard(
+                context,
+                'assets/images/yoga/Balasana1.png',
+                'Balasana',
+                'Ease your stress and anxiety',
+                Color(0xFFFFB300),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: CustomOrientationPlayer2(),
+                    type: PageTransitionType.bottomToTop,
+                  ),
+                );
+              },
+              child: yogaCard(
+                context,
+                'assets/images/yoga/Bitilasana1.png',
+                'Bitilasana',
+                'Creates emotional balance',
+                Color(0xFF689F38),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: CustomOrientationPlayer3(),
+                    type: PageTransitionType.bottomToTop,
+                  ),
+                );
+              },
+              child: yogaCard(
+                context,
+                'assets/images/yoga/Uttanasana1.png',
+                'Uttanasana',
+                'Calms the mind and soothes the nerves',
+                Color(0xFF26A69A),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: CustomOrientationPlayer4(),
+                    type: PageTransitionType.bottomToTop,
+                  ),
+                );
+              },
+              child: yogaCard(
+                context,
+                'assets/images/yoga/Vrikshasana1.png',
+                'Vrikshasana',
+                'Builds self-confidence and esteem',
+                Color(0xFFBA68C8),
+              ),
             )
           ],
         ),
