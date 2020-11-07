@@ -9,7 +9,7 @@ class _BMIChartState extends State<BMIChart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Color(0xFF0A0E0F),
+      backgroundColor: Color(0xFF0A0E0F),
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.black,
@@ -32,7 +32,6 @@ class _BMIChartState extends State<BMIChart> {
           ),
         ),
       ),
-      
     );
   }
 }

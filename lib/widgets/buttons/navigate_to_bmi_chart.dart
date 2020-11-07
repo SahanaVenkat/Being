@@ -2,17 +2,17 @@ import 'package:Being/screens/bmi_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-Widget bmiChart(BuildContext context){
-   double deviceHeight = MediaQuery.of(context).size.height;
-   return GestureDetector(
-     onTap: () {
+Widget bmiChart(BuildContext context) {
+  double deviceHeight = MediaQuery.of(context).size.height;
+  return GestureDetector(
+    onTap: () {
       Navigator.push(
-          context,
-          PageTransition(
-            child: BMIChart(),
-            type: PageTransitionType.rightToLeft,
-
-          ));
+        context,
+        PageTransition(
+          child: BMIChart(),
+          type: PageTransitionType.rightToLeft,
+        ),
+      );
     },
     child: Container(
       height: deviceHeight * 0.1,
@@ -30,7 +30,6 @@ Widget bmiChart(BuildContext context){
         color: Color(0XFF9E9D24).withOpacity(0.85),
         borderRadius: BorderRadius.circular(10.0),
       ),
-      width: double.infinity,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,6 +48,6 @@ Widget bmiChart(BuildContext context){
           ),
         ],
       ),
-   )
-   );
+    ),
+  );
 }
