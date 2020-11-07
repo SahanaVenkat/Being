@@ -26,7 +26,7 @@ Widget addJournalEntry(BuildContext context) {
         deviceHeight * 0.025,
       ),
       decoration: BoxDecoration(
-        color: Color(0XFF9E9D24).withOpacity(0.85),
+        color: Colors.redAccent.withOpacity(0.65),
         borderRadius: BorderRadius.circular(10.0),
       ),
       width: double.infinity,

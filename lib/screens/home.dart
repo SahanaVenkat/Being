@@ -87,23 +87,20 @@ class _HomeState extends State<Home> {
           BottomNavItem(
             icon: Icons.home_outlined,
             label: "Home",
-            selectedColor: Color(0XFFEEFF41),
+            selectedColor: Colors.redAccent,
           ),
           BottomNavItem(
-            icon: Icons.self_improvement_outlined,
-            label: "Mind",
-            selectedColor: Color(0XFFEEFF41),
-          ),
+              icon: Icons.self_improvement_outlined,
+              label: "Mind",
+              selectedColor: Colors.redAccent),
           BottomNavItem(
-            icon: Icons.directions_run_outlined,
-            label: "Body",
-            selectedColor: Color(0XFFEEFF41),
-          ),
+              icon: Icons.directions_run_outlined,
+              label: "Body",
+              selectedColor: Colors.redAccent),
           BottomNavItem(
-            icon: Icons.person_outline,
-            label: "Profile",
-            selectedColor: Color(0XFFEEFF41),
-          ),
+              icon: Icons.person_outline,
+              label: "Profile",
+              selectedColor: Colors.redAccent),
         ],
       ),
     );

@@ -51,13 +51,13 @@ class _HomeTabState extends State<HomeTab> {
                 },
                 child: actionSuggestion(
                   context,
-                  Color(0XFF757575),
+                  Color(0XFF202020),
                   '🏃‍♀️',
                   'Sweat It Out',
                 ),
               ),
               GestureDetector(
-                 onTap: () {
+                onTap: () {
                   Navigator.push(
                     context,
                     PageTransition(
@@ -66,22 +66,22 @@ class _HomeTabState extends State<HomeTab> {
                     ),
                   );
                 },
-                child:actionSuggestion(
-                context,
-                Color(0XFF757575),
-                '⚖️',
-                'Track Your Weight',
-              ),
+                child: actionSuggestion(
+                  context,
+                  Color(0XFF202020),
+                  '⚖️',
+                  'Track Your Weight',
+                ),
               ),
               actionSuggestion(
                 context,
-                Color(0XFF757575),
+                Color(0XFF202020),
                 '😴',
                 'Get Some Sleep',
               ),
               actionSuggestion(
                 context,
-                Color(0XFF757575),
+                Color(0XFF202020),
                 '🥗',
                 'Eat Healthy',
               ),
@@ -111,13 +111,13 @@ class _HomeTabState extends State<HomeTab> {
             children: [
               actionSuggestion(
                 context,
-                Color(0XFF757575),
+                Color(0XFF202020),
                 '🧘🏽‍♂️',
                 'Calm Your Mind',
               ),
               actionSuggestion(
                 context,
-                Color(0XFF757575),
+                Color(0XFF202020),
                 '😌',
                 'Breathe Easy',
               ),
@@ -133,7 +133,7 @@ class _HomeTabState extends State<HomeTab> {
                 },
                 child: actionSuggestion(
                   context,
-                  Color(0XFF757575),
+                  Color(0XFF202020),
                   '🙏',
                   'Hold Your Balance',
                 ),
@@ -150,7 +150,7 @@ class _HomeTabState extends State<HomeTab> {
                 },
                 child: actionSuggestion(
                   context,
-                  Color(0XFF757575),
+                  Color(0XFF202020),
                   '🚬',
                   'Break Free',
                 ),
