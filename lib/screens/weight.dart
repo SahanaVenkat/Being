@@ -1,3 +1,4 @@
+import 'package:Being/widgets/buttons/navigate_to_bmi_chart.dart';
 import 'package:Being/widgets/cards/weight_card.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -79,7 +80,7 @@ class _WeightState extends State<Weight> {
                       today,
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        color: Colors.white54,
+                        color: Colors.white,
                         fontSize: MediaQuery.of(context).size.height * 0.018,
                       ),
                     ),
@@ -104,7 +105,7 @@ class _WeightState extends State<Weight> {
                       time,
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        color: Colors.white54,
+                        color: Colors.white,
                         fontSize: MediaQuery.of(context).size.height * 0.018,
                       ),
                     ),
@@ -115,7 +116,7 @@ class _WeightState extends State<Weight> {
             Row(
               children: [
                 Text(
-                  'BMI Calculator',
+                  'BMI Calculator :',
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).size.height * 0.035,
                     fontWeight: FontWeight.bold,
@@ -124,19 +125,34 @@ class _WeightState extends State<Weight> {
                 )
               ],
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: weightCard(
-                    context,
-                    Color(0xFF43AA8B),
-                  ),
+            Padding(
+                padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.05,
                 ),
-              ],
+                child: Row(
+                children: [
+                  Expanded(
+                    child: weightCard(
+                      context,
+                      Color(0xFF43AA8B),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Row(
+             children: [
+             bmiChart(context),
+             Container(
+             margin: EdgeInsets.only(
+             top: MediaQuery.of(context).size.height * 0.01,
+             ),
             )
           ],
-        ),
-      ),
-    );
+        )
+      ],
+     ),
+    ),
+   );
   }
 }
