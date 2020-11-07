@@ -45,7 +45,7 @@ class _journal_entryState extends State<journal_entry> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Good Morning Joy!',
+                    'Good Morning Brie!',
                     style: TextStyle(
                       fontSize: MediaQuery.of(context).size.height * 0.035,
                       fontWeight: FontWeight.bold,
@@ -136,15 +136,10 @@ class _journal_entryState extends State<journal_entry> {
                     Color(0xFF7C4DFF),
                   ),
                 ),
-              Expanded(
-                flex: 1,
-                child: moodCard(
-                  context,
-                  '🙄',
-                  'Confused',
-                  Color(0XFFE91E63)
+                Expanded(
+                  flex: 1,
+                  child: moodCard(context, '🙄', 'Confused', Color(0XFFE91E63)),
                 ),
-              ),
                 Expanded(
                   flex: 1,
                   child: moodCard(
