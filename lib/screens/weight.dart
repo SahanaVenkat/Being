@@ -22,8 +22,8 @@ class _WeightState extends State<Weight> {
     DateTime current = DateTime.now();
     time = DateFormat('hh:mm').format(current).toString();
   }
-  Widget build(BuildContext context) {
 
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF0A0E0F),
       appBar: AppBar(
@@ -50,91 +50,93 @@ class _WeightState extends State<Weight> {
       ),
       body: Container(
         margin: EdgeInsets.only(
-              left: MediaQuery.of(context).size.width * 0.05,
-              right: MediaQuery.of(context).size.width * 0.04,
-            ),
-            child: ListView(children: [
-              Container(
-                margin: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.04,
-                  bottom: MediaQuery.of(context).size.height * 0.05,
-                  left: MediaQuery.of(context).size.width * 0.020,
-                ),
-        child:Row(
-         
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+          left: MediaQuery.of(context).size.width * 0.05,
+          right: MediaQuery.of(context).size.width * 0.04,
+        ),
+        child: ListView(
           children: [
-             Icon(
-            Icons.calendar_today_outlined,
-            color: Colors.white,
-          ),
-            Padding(
+            Container(
+              margin: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.04,
+                bottom: MediaQuery.of(context).size.height * 0.05,
+                left: MediaQuery.of(context).size.width * 0.020,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Icon(
+                    Icons.calendar_today_outlined,
+                    color: Colors.white,
+                  ),
+                  Padding(
                     padding: EdgeInsets.only(
                       left: MediaQuery.of(context).size.height * 0.02,
                       top: MediaQuery.of(context).size.height * 0.01,
                       right: MediaQuery.of(context).size.height * 0.05,
                     ),
                     child: Text(
-                    today,
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.white54,
-                      fontSize: MediaQuery.of(context).size.height * 0.018,
-                      
+                      today,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Colors.white54,
+                        fontSize: MediaQuery.of(context).size.height * 0.018,
+                      ),
                     ),
                   ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.09,
+                    ),
+                    child: Icon(
+                      Icons.timer,
+                      color: Colors.white,
+                      size: 28.0,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.height * 0.02,
+                      top: MediaQuery.of(context).size.height * 0.01,
+                      right: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    child: Text(
+                      time,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Colors.white54,
+                        fontSize: MediaQuery.of(context).size.height * 0.018,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Padding(
-                padding: EdgeInsets.only(
-                  left: MediaQuery.of(context).size.height * 0.09,
+            Row(
+              children: [
+                Text(
+                  'BMI Calculator',
+                  style: TextStyle(
+                    fontSize: MediaQuery.of(context).size.height * 0.035,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: weightCard(
+                    context,
+                    Color(0xFF43AA8B),
+                  ),
                 ),
-                child: Icon(
-                Icons.timer,
-                color: Colors.white,
-                size: 28.0,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-              left: MediaQuery.of(context).size.height * 0.02,
-              top: MediaQuery.of(context).size.height * 0.01,
-              right: MediaQuery.of(context).size.height * 0.05,
-            ),
-            child: Text(
-            time,
-            textAlign: TextAlign.left,
-            style: TextStyle(
-            color: Colors.white54,
-            fontSize: MediaQuery.of(context).size.height * 0.018,
-              ),
-             ),
-            ),
+              ],
+            )
           ],
         ),
       ),
-      Row(
-        children: [
-          Text(
-            'BMI Calculator',
-             style: TextStyle(
-               fontSize: MediaQuery.of(context).size.height * 0.035,
-               fontWeight: FontWeight.bold,
-               color: Colors.white,
-             ), 
-          )
-        ],
-      ),
-      Row(
-        children: [
-         Expanded(
-          child: weightCard(context, Color(0xFFBA68C8)),
-         ),
-        ],
-      )
-    ]
-  )
-)
-);
-}
+    );
+  }
 }
