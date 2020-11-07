@@ -56,6 +56,7 @@ class _WeightTipsState extends State<WeightTips> {
                     style: TextStyle(
                     color: Colors.white,
                     fontSize: MediaQuery.of(context).size.height * 0.030,
+                    fontWeight: FontWeight.bold,
                     ),
                 ),
               ),
@@ -96,7 +97,8 @@ class _WeightTipsState extends State<WeightTips> {
                   'Healthy Weight -- 18.5-24.9kg/m2 ',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: MediaQuery.of(context).size.height * 0.030,
+                    fontSize: MediaQuery.of(context).size.height * 0.029,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -120,10 +122,11 @@ class _WeightTipsState extends State<WeightTips> {
                     bottom: MediaQuery.of(context).size.height * 0.05,
                   ),
                   child: Text(
-                  'Over Weight -- 18.5-24.9kg/m2 ',
+                  'Over Weight -- 18.5-24.9kg/m2',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: MediaQuery.of(context).size.height * 0.030,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -165,6 +168,7 @@ class _WeightTipsState extends State<WeightTips> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: MediaQuery.of(context).size.height * 0.030,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -198,13 +202,11 @@ class _WeightTipsState extends State<WeightTips> {
                 ),
 
               ],
-          ),
-        
-             ),
-          ],
+           ),
         ),
-      ),
-      
-    );
+       ],
+    ),
+ ),
+        );
   }
 }
