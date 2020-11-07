@@ -1,3 +1,5 @@
+import 'package:Being/screens/home.dart';
+import 'package:Being/widgets/buttons/add_journal_entry.dart';
 import 'package:Being/widgets/cards/mood_card.dart';
 import 'package:flutter/material.dart';
 
@@ -150,6 +152,12 @@ class _journal_entryState extends State<journal_entry> {
                   ),
                 )
               ],
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: addJournalEntryButton(MediaQuery.of(context).size.height),
             ),
           ],
         ),
